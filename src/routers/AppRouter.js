@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Header from '../components/Header.js'
 import Home from '../pages/Home.js'
 import Login from '../pages/Login.js'
 import Products from '../pages/Products.js'
@@ -10,15 +11,18 @@ import NotFound from '../pages/NotFound'
 
 const AppRouter = () => (
   <BrowserRouter>
-    <Switch>
-      <Route path='/' component={Home} exact />
-      <Route path='/login' component={Login} />
-      <Route path='/products' component={Products} />
-      <Route path='/cart' component={Cart} />
-      <Route path='/checkout' component={Checkout} />
-      <Route path='/checkout-success' component={CheckoutSuccess} />
-      <Route component={NotFound} />
-    </Switch>
+    <div>
+      <Header />
+      <Switch>
+        <Route path='/' component={Home} exact />
+        <Route path='/login' component={Login} />
+        <Route path='/products' component={Products} />
+        <Route path='/cart' component={Cart} />
+        <Route path='/checkout' component={Checkout} />
+        <Route path='/checkout-success' component={CheckoutSuccess} />
+        <Route component={NotFound} />
+      </Switch>
+    </div>
   </BrowserRouter>
 )
 export default AppRouter

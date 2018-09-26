@@ -1,4 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
+import { display } from 'styled-system'
 import ArrowForward from './icons/ArrowForward.js'
 import Cart from './icons/Cart.js'
 import Delete from './icons/Delete.js'
@@ -42,4 +44,8 @@ const Icon = (props) => {
   }
 }
 
-export default Icon
+const styledIcon = styled(Icon)`
+  ${display}
+`
+
+export default styledIcon

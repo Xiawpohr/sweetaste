@@ -4,9 +4,9 @@ const LogoAll = ({
   style = {},
   fill = '#3F5D45',
   width = '220.487',
-  height = '41',
+  height = '40',
   className = '',
-  viewBox = '0 0 220.487 41'
+  viewBox = '0 0 220.487 40'
 }) => (
   <svg
     width={width}

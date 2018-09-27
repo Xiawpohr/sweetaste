@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {
   space,
+  maxWidth,
   width,
   height,
   color,
@@ -9,6 +10,7 @@ import {
 
 const Box = styled.div`
   ${space}
+  ${maxWidth}
   ${width}
   ${height}
   ${color}
@@ -17,6 +19,7 @@ const Box = styled.div`
 
 Box.propTypes = {
   ...space.propTypes,
+  ...maxWidth.propTypes,
   ...width.propTypes,
   ...height.propTypes,
   ...color.propTypes,

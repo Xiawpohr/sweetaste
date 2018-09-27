@@ -11,13 +11,13 @@ const Footer = () => (
   <footer>
     <Background bg='darkGreen'>
       <Container maxWidth='8.4rem'>
-        <Flex py={3} justifyContent='space-between' alignItems='center' flexWrap='wrap'>
-          <Flex alignItems='center'>
+        <Flex py={3} justifyContent={['center', 'space-between']} alignItems='center' flexWrap='wrap'>
+          <Flex mb={[3, '0px']} alignItems='center'>
             <Icon name='LogoLight' />
             <Text ml={2} fontSize={2} color='lightGreen' fontFamily='Helvetica Neue'>訂閱你我的甜蜜郵件</Text>
           </Flex>
           <Flex>
-            <Input type='text' icon='Email' width={316} />
+            <Input type='text' icon='Email' maxWidth={316} />
             <Button><Icon name='ArrowForward' /></Button>
           </Flex>
         </Flex>

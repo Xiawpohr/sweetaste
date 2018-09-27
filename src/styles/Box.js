@@ -5,7 +5,11 @@ import {
   width,
   height,
   color,
-  display
+  display,
+  flex,
+  alignSelf,
+  justifySelf,
+  order
 } from 'styled-system'
 
 const Box = styled.div`
@@ -15,6 +19,10 @@ const Box = styled.div`
   ${height}
   ${color}
   ${display}
+  ${flex}
+  ${alignSelf}
+  ${justifySelf}
+  ${order}
 `
 
 Box.propTypes = {
@@ -23,7 +31,11 @@ Box.propTypes = {
   ...width.propTypes,
   ...height.propTypes,
   ...color.propTypes,
-  ...display.propTypes
+  ...display.propTypes,
+  ...flex.propTypes,
+  ...alignSelf.propTypes,
+  ...justifySelf.propTypes,
+  ...order.propTypes
 }
 
 Box.displayName = 'Box'

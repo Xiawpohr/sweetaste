@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-const PlainInput = styled.input`
+const PlainInput = styled.input.attrs({
+  type: 'text'
+})`
   background-color: unset;
   border: none;
   color: ${props => props.theme.colors.green};

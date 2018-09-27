@@ -5,7 +5,7 @@ import Icon from '../styles/Icon.js'
 import PlainInput from '../styles/PlainInput.js'
 
 const Input = (props) => (
-  <Box bg='lightGreen' maxWidth={props.maxWidth}>
+  <Box bg='lightGreen' {...props}>
     <Flex p={1} alignItems='center'>
       { props.icon && <Icon mr={1} name={props.icon} /> }
       <PlainInput {...props} />

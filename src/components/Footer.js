@@ -10,7 +10,7 @@ import Input from './Input.js'
 const Footer = () => (
   <footer>
     <Background bg='darkGreen'>
-      <Container maxWidth='7.8rem'>
+      <Container maxWidth='8.4rem'>
         <Flex py={3} justifyContent={['center', 'space-between']} alignItems='center' flexWrap='wrap'>
           <Flex mb={[3, '0px']} alignItems='center'>
             <Icon name='LogoLight' />
@@ -24,7 +24,7 @@ const Footer = () => (
       </Container>
     </Background>
     <Background bg='lightGreen'>
-      <Container maxWidth='7.8rem'>
+      <Container maxWidth='8.4rem'>
         <Flex py={3} justifyContent='space-between'>
           <Flex flexDirection='column' justifyContent='space-between'>
             <Icon mt={0} name="LogoType" />

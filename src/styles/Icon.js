@@ -3,16 +3,19 @@ import styled from 'styled-components'
 import { space, display } from 'styled-system'
 import ArrowForward from './icons/ArrowForward.js'
 import Cart from './icons/Cart.js'
+import Check from './icons/Check.js'
 import Delete from './icons/Delete.js'
 import Email from './icons/Email.js'
 import Facebook from './icons/Facebook.js'
 import Favorite from './icons/Favorite.js'
+import Key from './icons/Key.js'
 import Line from './icons/Line.js'
 import LogoAll from './icons/LogoAll.js'
 import LogoDark from './icons/LogoDark.js'
 import LogoLight from './icons/LogoLight.js'
 import LogoType from './icons/LogoType.js'
 import Menu from './icons/Menu.js'
+import Person from './icons/Person.js'
 
 const Icon = (props) => {
   switch (props.name) {
@@ -20,6 +23,8 @@ const Icon = (props) => {
       return <ArrowForward {...props} />
     case 'Cart':
       return <Cart {...props} />
+    case 'Check':
+      return <Check {...props} />
     case 'Delete':
       return <Delete {...props} />
     case 'Email':
@@ -28,6 +33,8 @@ const Icon = (props) => {
       return <Facebook {...props} />
     case 'Favorite':
       return <Favorite {...props} />
+    case 'Key':
+      return <Key {...props} />
     case 'Line':
       return <Line {...props} />
     case 'LogoAll':
@@ -40,6 +47,8 @@ const Icon = (props) => {
       return <LogoType {...props} />
     case 'Menu':
       return <Menu {...props} />
+    case 'Person':
+      return <Person {...props} />
     default:
   }
 }

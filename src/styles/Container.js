@@ -5,7 +5,7 @@ const Container = styled.div`
   ${space}
   ${maxWidth}
   margin: 0 auto;
-  padding: 0 ${props => props.theme.space[2]};
+  padding: 0 ${props => props.theme.space[3]};
 `
 Container.propTypes = {
   ...space.propTypes,

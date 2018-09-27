@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { display } from 'styled-system'
+import { space, display } from 'styled-system'
 import ArrowForward from './icons/ArrowForward.js'
 import Cart from './icons/Cart.js'
 import Delete from './icons/Delete.js'
@@ -45,7 +45,14 @@ const Icon = (props) => {
 }
 
 const styledIcon = styled(Icon)`
+  ${space}
   ${display}
+  fill: current-color;
 `
+
+styledIcon.propTypes = {
+  ...space.propTypes,
+  ...display.propTypes
+}
 
 export default styledIcon

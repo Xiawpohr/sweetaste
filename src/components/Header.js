@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Icon from './Icon.js'
+import Icon from '../styles/Icon.js'
 import Container from '../styles/Container.js'
 import Flex from '../styles/Flex.js'
 import NavLink from '../styles/NavLink.js'
@@ -8,7 +8,7 @@ import NavLink from '../styles/NavLink.js'
 const Header = () => (
   <header>
     <Container>
-      <Flex py={2} justifyContent='space-between' alignItems='center'>
+      <Flex py={3} justifyContent='space-between' alignItems='center'>
         <Icon name='Menu' display={['block', 'none']} />
         <Link to='/'>
           <Icon name='LogoType' width='114.14' height='17.74' display={['block', 'none']} />
@@ -18,7 +18,7 @@ const Header = () => (
           justifyContent='space-between'
           alignItems='center'
           flex='1'
-          mr={40}
+          mr={4}
         >
           <Link to='/'><Icon name='LogoAll' /></Link>
           <div>

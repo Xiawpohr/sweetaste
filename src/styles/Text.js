@@ -1,13 +1,39 @@
 import styled from 'styled-components'
-import { space, fontSize, color, display } from 'styled-system'
+import {
+  space,
+  color,
+  display,
+  fontSize,
+  fontFamily,
+  fontWeight,
+  lineHeight,
+  letterSpacing,
+  textAlign
+} from 'styled-system'
 
 const Text = styled.div`
-  text-decoration: none
   ${space}
-  ${fontSize}
   ${color}
   ${display}
+  ${fontSize}
+  ${fontFamily}
+  ${fontWeight}
+  ${lineHeight}
+  ${letterSpacing}
+  ${textAlign}
+  writing-mode: ${props => props.mode};
 `
+Text.propTypes = {
+  ...space.propTypes,
+  ...color.propTypes,
+  ...display.propTypes,
+  ...fontSize.propTypes,
+  ...fontFamily.propTypes,
+  ...fontWeight.propTypes,
+  ...lineHeight.propTypes,
+  ...letterSpacing.propTypes,
+  ...textAlign.propTypes
+}
 
 Text.displayName = 'Text'
 

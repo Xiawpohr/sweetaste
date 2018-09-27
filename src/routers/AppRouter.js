@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Header from '../components/Header.js'
+import Footer from '../components/Footer.js'
 import Home from '../pages/Home.js'
 import Login from '../pages/Login.js'
 import Products from '../pages/Products.js'
@@ -22,6 +23,7 @@ const AppRouter = () => (
         <Route path='/checkout-success' component={CheckoutSuccess} />
         <Route component={NotFound} />
       </Switch>
+      <Footer />
     </div>
   </BrowserRouter>
 )

@@ -31,9 +31,9 @@ const Products = () => (
     </Mobile>
     <Desktop>
       <Container>
-        <Background height={277} backgroundImage={`url(${havingDessert})`}>
+        <Background height={496} backgroundImage={`url(${havingDessert})`}>
           <Flex justifyContent='flex-end'>
-            <Text mt={3} mr={3} fontSize={22} color='darkGreen' mode='vertical-rl' letterSpacing={6.5}>
+            <Text mt={3} mr={3} fontSize={3} color='darkGreen' mode='vertical-rl' letterSpacing={6.5}>
               想吃甜點——<br /><span style={{ marginTop: 11 }}>是不需要理由的。</span>
             </Text>
           </Flex>

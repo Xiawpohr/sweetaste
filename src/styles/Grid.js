@@ -1,18 +1,39 @@
 import styled from 'styled-components'
+import { style } from 'styled-system'
+
+const itemWidth = style({
+  prop: 'itemWidth',
+  cssProperty: 'width',
+  transformValue: n => n + 'px'
+})
+
+const gap = style({
+  prop: 'gap',
+  cssProperty: 'margin',
+  transformValue: n => `${n / 2}px`
+})
+
+const containerGap = style({
+  prop: 'gap',
+  cssProperty: 'margin',
+  transformValue: n => `-${n / 2}px`
+})
 
 const Grid = styled.div`
-  margin: ${props => -(props.gap / 200)}rem;
+  ${containerGap}
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: start;
 
   > * {
-    margin: ${props => props.gap / 200}rem; 
+    ${itemWidth}
+    ${gap}
   }
 `
 
 Grid.defaultProps = {
+  itemWidth: 315,
   gap: 30
 }
 

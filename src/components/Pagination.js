@@ -1,7 +1,6 @@
 import React from 'react'
 import PaginationItem from './PaginationItem.js'
 import Flex from '../styles/Flex.js'
-import Box from '../styles/Box.js'
 import Text from '../styles/Text.js'
 import Icon from '../styles/Icon.js'
 

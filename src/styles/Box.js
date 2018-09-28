@@ -4,10 +4,11 @@ import {
   maxWidth,
   width,
   height,
-  border,
+  borders,
   borderColor,
   borderRadius,
   color,
+  opacity,
   display,
   flex,
   alignSelf,
@@ -20,10 +21,11 @@ const Box = styled.div`
   ${maxWidth}
   ${width}
   ${height}
-  ${border}
+  ${borders}
   ${borderColor}
   ${borderRadius}
   ${color}
+  ${opacity}
   ${display}
   ${flex}
   ${alignSelf}
@@ -36,10 +38,11 @@ Box.propTypes = {
   ...maxWidth.propTypes,
   ...width.propTypes,
   ...height.propTypes,
-  ...border.propTypes,
+  ...borders.propTypes,
   ...borderColor.propTypes,
   ...borderRadius.propTypes,
   ...color.propTypes,
+  ...opacity.propTypes,
   ...display.propTypes,
   ...flex.propTypes,
   ...alignSelf.propTypes,

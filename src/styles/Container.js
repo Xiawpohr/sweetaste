@@ -4,8 +4,6 @@ import { space, maxWidth } from 'styled-system'
 const Container = styled.div`
   ${space}
   ${maxWidth}
-  margin: 0 auto;
-  padding: 0 ${props => props.theme.space[3]};
 `
 Container.propTypes = {
   ...space.propTypes,
@@ -13,7 +11,9 @@ Container.propTypes = {
 }
 
 Container.defaultProps = {
-  maxWidth: '10rem'
+  maxWidth: '10rem',
+  m: '0 auto',
+  p: '0 .3rem'
 }
 
 Container.displayName = 'Container'

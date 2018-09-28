@@ -14,6 +14,6 @@ injectGlobal`
     padding: 0;
     font-family: 'PingFang TC', Helvetica, Arial, sans-serif;
     font-size: 0.16rem;
-    line-height: 1.6;
+    line-height: 1.375;
   }
 `

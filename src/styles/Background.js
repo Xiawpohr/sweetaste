@@ -1,17 +1,19 @@
 import styled from 'styled-components'
-import { background, color } from 'styled-system'
+import { backgroundImage, color, height } from 'styled-system'
 
 const Background = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  ${background}
+  ${backgroundImage}
   ${color}
+  ${height}
 `
 
 Background.propTypes = {
-  ...background.propTypes,
-  ...color.propTypes
+  ...backgroundImage.propTypes,
+  ...color.propTypes,
+  ...height.propTypes
 }
 
 Background.displayName = 'Background'

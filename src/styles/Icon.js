@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { space, display } from 'styled-system'
 import ArrowForward from './icons/ArrowForward.js'
+import ArrowLeft from './icons/ArrowLeft.js'
+import ArrowRight from './icons/ArrowRight.js'
 import Cart from './icons/Cart.js'
 import Check from './icons/Check.js'
 import Delete from './icons/Delete.js'
@@ -21,6 +23,10 @@ const Icon = (props) => {
   switch (props.name) {
     case 'ArrowForward':
       return <ArrowForward {...props} />
+    case 'ArrowLeft':
+      return <ArrowLeft {...props} />
+    case 'ArrowRight':
+      return <ArrowRight {...props} />
     case 'Cart':
       return <Cart {...props} />
     case 'Check':

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { space, display } from 'styled-system'
+import { space, display, color } from 'styled-system'
 import ArrowForward from './icons/ArrowForward.js'
 import ArrowLeft from './icons/ArrowLeft.js'
 import ArrowRight from './icons/ArrowRight.js'
@@ -62,12 +62,14 @@ const Icon = (props) => {
 const styledIcon = styled(Icon)`
   ${space}
   ${display}
-  fill: current-color;
+  ${color}
+  fill: currentColor;
 `
 
 styledIcon.propTypes = {
   ...space.propTypes,
-  ...display.propTypes
+  ...display.propTypes,
+  ...color.propTypes
 }
 
 export default styledIcon

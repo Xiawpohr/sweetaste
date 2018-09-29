@@ -25,7 +25,16 @@ const CartContent = () => (
       </Container>
     </Mobile>
     <Desktop>
-
+      <Text mb={10} py={1} fontSize={2} fontWeight={600} color='darkGreen' bg='lightGreen' textAlign='center'>您的購物車</Text>
+      <Box py={2}>
+        <CartItem />
+      </Box>
+      <Box py={2} borderTop='1px solid' borderColor='lightGreen'>
+        <CartItem />
+      </Box>
+      <Box py={2} borderTop='1px solid' borderColor='lightGreen'>
+        <CartItem />
+      </Box>
     </Desktop>
   </div>
 )

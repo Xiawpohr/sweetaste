@@ -1,19 +1,28 @@
 import styled from 'styled-components'
-import { width } from 'styled-system'
+import { width, color, borders, space } from 'styled-system'
 
 const Button = styled.button`
   ${width}
-  padding: ${props => props.theme.space[1]};
-  border: none;
-  color: ${props => props.theme.colors.darkGreen};
-  background-color: ${props => props.theme.colors.yellow};
+  ${color}
+  ${borders}
+  ${space}
   display: flex;
   justify-content: center;
-  align-items: cneter;
+  align-items: center;
 `
 
+Button.defaultProps = {
+  p: 1,
+  border: 'none',
+  color: 'darkGreen',
+  bg: 'yellow'
+}
+
 Button.propTypes = {
-  ...width.propTypes
+  ...width.propTypes,
+  ...color.propTypes,
+  ...borders.propsTypes,
+  ...space.propTypes
 }
 
 Button.displayName = 'Button'

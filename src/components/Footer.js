@@ -1,7 +1,9 @@
 import React from 'react'
+import Quote from './Quote.js'
 import Background from '../styles/Background.js'
 import Container from '../styles/Container.js'
 import Flex from '../styles/Flex.js'
+import Box from '../styles/Box.js'
 import Text from '../styles/Text.js'
 import Icon from '../styles/Icon.js'
 import Button from '../styles/Button.js'
@@ -28,22 +30,22 @@ const Footer = () => (
         <Flex py={3} justifyContent='space-between'>
           <Flex flexDirection='column' justifyContent='space-between'>
             <Icon mt={0} name="LogoType" />
-            <Text mt={4} fontSize={0} color='darkGreen'>
+            <Text mt={4} fontSize={0} fontFamily='"Helvetica Neue"' color='darkGreen' lineHeight={1.5}>
               07-1234-5678<br/>
               sweetaste@email.com<br/>
               800 高雄市新興區幸福路 520 號
             </Text>
           </Flex>
-          <Text display={['none', 'block']} fontSize={22} color='darkGreen' letterSpacing={6.5} mode='vertical-rl'>
-            今天是個——<br/> <span style={{ marginTop: 11 }}>吃甜點的好日子。</span>
-          </Text>
+          <Box display={['none', 'block']} >
+            <Quote firstLine='今天是個' secondLine='吃甜點的好日子' fontSize={22} />
+          </Box>
         </Flex>
         <Flex pb={3} justifyContent='space-between' alignItems='flex-end' flexWrap='wrap'>
           <div>
             <Icon name='Line' />
             <Icon name='Facebook' ml={0} />
           </div>
-          <Text mt={1} fontSize={0} color='darkGreen'>© 2018 Sweetaste* All Rights Reserved</Text>
+          <Text mt={1} fontSize={0} fontFamily='Times' color='darkGreen' letterSpacing={0.5}>© 2018 Sweetaste* All Rights Reserved</Text>
         </Flex>
       </Container>
     </Background>

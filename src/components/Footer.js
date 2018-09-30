@@ -37,7 +37,7 @@ const Footer = () => (
             </Text>
           </Flex>
           <Box display={['none', 'block']} >
-            <Quote firstLine='今天是個' secondLine='吃甜點的好日子' fontSize={22} />
+            <Quote firstLine='今天是個' secondLine='吃甜點的好日子。' fontSize={22} letterSpacing={6}/>
           </Box>
         </Flex>
         <Flex pb={3} justifyContent='space-between' alignItems='flex-end' flexWrap='wrap'>

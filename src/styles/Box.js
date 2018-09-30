@@ -31,7 +31,7 @@ const Box = styled.div`
   ${alignSelf}
   ${justifySelf}
   ${order}
-  cursor: ${props => props.clickable && 'pointer'}
+  cursor: ${props => props.clickable && 'pointer'};
 `
 
 Box.propTypes = {

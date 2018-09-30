@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 import Header from '../components/Header.js'
 import Footer from '../components/Footer.js'
 import Home from '../pages/Home.js'
@@ -11,7 +11,7 @@ import CheckoutSuccess from '../pages/CheckoutSuccess.js'
 import NotFound from '../pages/NotFound'
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <HashRouter>
     <div>
       <Header />
       <Switch>
@@ -25,6 +25,6 @@ const AppRouter = () => (
       </Switch>
       <Footer />
     </div>
-  </BrowserRouter>
+  </HashRouter>
 )
 export default AppRouter

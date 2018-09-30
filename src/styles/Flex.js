@@ -11,6 +11,7 @@ import {
 } from 'styled-system'
 
 const Flex = styled.div`
+  height: ${props => props.fillHeight && '100%'};
   display: flex;
   ${flexDirection}
   ${flexWrap}

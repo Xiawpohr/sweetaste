@@ -7,7 +7,7 @@ export default () => ({
     white: '#FFFFFF'
   },
   fontSizes: [
-    '0.16rem', '0.2rem', '0.24rem', '0.36rem'
+    '0.16rem', '0.2rem', '0.24rem', '0.36rem', '0.48rem'
   ],
   space: [
     '0.08rem', '0.16rem', '0.2rem', '0.3rem', '0.4rem', '0.6rem'

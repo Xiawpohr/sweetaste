@@ -8,12 +8,11 @@ import Flex from '../styles/Flex.js'
 import Box from '../styles/Box.js'
 import Text from '../styles/Text.js'
 import Button from '../styles/Button.js'
-import picnicTable from '../images/picnic-table.jpg'
 
 const CheckoutSuccess = () => (
   <div>
     <Mobile>
-      <Background height={518} backgroundImage={`url(${picnicTable})`}>
+      <Background height={518} backgroundImage={`url(https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=800&q=60)`}>
         <Flex flexDirection='column' justifyContent='center' alignItems='center' fillHeight>
           <Box mb={3} width={190}>
             <FormStepper completedSteps={3}/>
@@ -27,7 +26,7 @@ const CheckoutSuccess = () => (
     </Mobile>
     <Desktop>
       <Container mb={5}>
-        <Background height={518} backgroundImage={`url(${picnicTable})`}>
+        <Background height={518} backgroundImage={`url(https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=800&q=60)`}>
           <Flex flexDirection='column' justifyContent='center' alignItems='center' fillHeight>
             <Box mb={3} width={190}>
               <FormStepper completedSteps={3}/>

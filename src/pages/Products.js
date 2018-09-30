@@ -9,12 +9,11 @@ import Container from '../styles/Container.js'
 import Flex from '../styles/Flex.js'
 import Box from '../styles/Box.js'
 import Background from '../styles/Background.js'
-import havingDessert from '../images/having-dessert.jpg'
 
 const Products = () => (
   <div>
     <Mobile>
-      <Background height={277} backgroundImage={`url(${havingDessert})`}>
+      <Background height={277} backgroundImage={`url(https://images.unsplash.com/photo-1512484457149-266d165a4eca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=786581a33fd6c9343735655439ce2e5a&auto=format&fit=crop&w=800&q=60)`}>
         <Flex justifyContent='flex-end'>
           <Box mt={3} mr={3}>
             <Quote firstLine='想吃甜點' secondLine='是不需要理由的。' fontSize={22} letterSpacing={6} />
@@ -31,7 +30,7 @@ const Products = () => (
     </Mobile>
     <Desktop>
       <Container>
-        <Background height={496} backgroundImage={`url(${havingDessert})`}>
+        <Background height={496} backgroundImage={`url(https://images.unsplash.com/photo-1512484457149-266d165a4eca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=786581a33fd6c9343735655439ce2e5a&auto=format&fit=crop&w=800&q=60)`}>
           <Flex justifyContent='flex-end'>
             <Box mt={3} mr={3}>
               <Quote firstLine='想吃甜點' secondLine='是不需要理由的。' />

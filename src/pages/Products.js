@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Mobile from '../components/Mobile.js'
 import Desktop from '../components/Desktop.js'
 import Quote from '../components/Quote.js'
@@ -10,7 +11,7 @@ import Flex from '../styles/Flex.js'
 import Box from '../styles/Box.js'
 import Background from '../styles/Background.js'
 
-const Products = () => (
+const Products = ({ products }) => (
   <div>
     <Mobile>
       <Background height={277} backgroundImage={`url(https://images.unsplash.com/photo-1512484457149-266d165a4eca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=786581a33fd6c9343735655439ce2e5a&auto=format&fit=crop&w=800&q=60)`}>
@@ -22,7 +23,7 @@ const Products = () => (
       </Background>
       <CategoryList />
       <Container my={3}>
-        <ProductList />
+        <ProductList products={products.slice(0, 3)}/>
       </Container>
       <Flex mb={3} justifyContent='center'>
         <Pagination />
@@ -42,7 +43,7 @@ const Products = () => (
             <CategoryList />
           </Box>
           <Box pl={2} flex={1}>
-            <ProductList />
+            <ProductList products={products}/>
             <Flex mt={3} justifyContent='flex-end'>
               <Pagination />
             </Flex>
@@ -53,4 +54,8 @@ const Products = () => (
   </div>
 )
 
-export default Products
+const mapStateToProps = state => ({
+  products: state.products
+})
+
+export default connect(mapStateToProps)(Products)

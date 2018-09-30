@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Mobile from '../components/Mobile.js'
 import Desktop from '../components/Desktop.js'
 import Quote from '../components/Quote.js'
@@ -11,7 +12,7 @@ import Position from '../styles/Position.js'
 import Background from '../styles/Background.js'
 import Text from '../styles/Text.js'
 
-const Home = () => (
+const Home = ({ products }) => (
   <div>
     <Mobile>
       <Background height={277} backgroundImage={`url(https://images.unsplash.com/photo-1473256599800-b48c7c88cd7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae0d68ab0db4ee79bdce92722b31112b&auto=format&fit=crop&w=800&q=60)`} />
@@ -28,7 +29,7 @@ const Home = () => (
       </Background>
       <Text p={3} fontSize={2} fontWeight={600} fontFamily='"YuMincho +36p Kana"' letterSpacing={4} color='darkGreen' textAlign='center'>想吃甜點——<br/>是不需要理由的。</Text>
       <Container>
-        <ProductList />
+        <ProductList products={products.slice(0, 1)} />
       </Container>
     </Mobile>
     <Desktop>
@@ -86,10 +87,14 @@ const Home = () => (
         <Quote firstLine='想吃甜點' secondLine='是不需要理由的。' />
       </Flex>
       <Container pb={5}>
-        <ProductList />
+        <ProductList products={products.slice(0, 3)}/>
       </Container>
     </Desktop>
   </div>
 )
 
-export default Home
+const mapStateToProps = state => ({
+  products: state.products
+})
+
+export default connect(mapStateToProps)(Home)

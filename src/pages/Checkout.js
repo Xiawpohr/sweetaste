@@ -1,8 +1,16 @@
 import React from 'react'
+import Mobile from '../components/Mobile.js'
+import Desktop from '../components/Desktop.js'
+import CheckoutForm from '../components/CheckoutForm.js'
 
 const Checkout = () => (
   <div>
-    This is Checkout page.
+    <Mobile>
+      <CheckoutForm />
+    </Mobile>
+    <Desktop>
+      
+    </Desktop>
   </div>
 )
 

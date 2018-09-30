@@ -66,6 +66,10 @@ const styledIcon = styled(Icon)`
   fill: currentColor;
 `
 
+styledIcon.defaultProps = {
+  color: 'darkGreen'
+}
+
 styledIcon.propTypes = {
   ...space.propTypes,
   ...display.propTypes,

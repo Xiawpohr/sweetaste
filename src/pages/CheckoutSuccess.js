@@ -16,7 +16,7 @@ const CheckoutSuccess = () => (
       <Background height={518} backgroundImage={`url(${picnicTable})`}>
         <Flex flexDirection='column' justifyContent='center' alignItems='center' fillHeight>
           <Box mb={3} width={190}>
-            <FormStepper />
+            <FormStepper completedSteps={3}/>
           </Box>
           <Text fontSize={4} fontWeight={700} fontFamily='"YuMincho +36p Kana"' color='darkGreen'>付款成功</Text>
         </Flex>
@@ -30,7 +30,7 @@ const CheckoutSuccess = () => (
         <Background height={518} backgroundImage={`url(${picnicTable})`}>
           <Flex flexDirection='column' justifyContent='center' alignItems='center' fillHeight>
             <Box mb={3} width={190}>
-              <FormStepper />
+              <FormStepper completedSteps={3}/>
             </Box>
             <Text mb={4} fontSize={4} fontWeight={700} fontFamily='"YuMincho +36p Kana"' color='darkGreen'>付款成功</Text>
             <Button width={300}>

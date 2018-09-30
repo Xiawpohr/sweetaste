@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const PlainInput = styled.input.attrs({
   type: 'text'
 })`
+  width: 100%;
   background-color: unset;
   border: none;
   color: ${props => props.theme.colors.green};

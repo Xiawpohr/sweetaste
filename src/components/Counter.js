@@ -8,7 +8,7 @@ class Counter extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      value: 0
+      value: props.value || 0
     }
     this.add = this.add.bind(this)
     this.substract = this.substract.bind(this)
@@ -18,6 +18,7 @@ class Counter extends React.Component {
     this.setState({
       value: this.state.value + 1
     })
+    this.props.onChange(this.state.value)
   }
 
   substract () {
@@ -25,6 +26,7 @@ class Counter extends React.Component {
       this.setState({
         value: this.state.value - 1
       })
+      this.props.onChange(this.state.value)
     }
   }
 
@@ -55,6 +57,10 @@ class Counter extends React.Component {
       </Flex>
     )
   }
+}
+
+Counter.defaultProps = {
+  onChange: () => {}
 }
 
 export default Counter

@@ -9,18 +9,18 @@ const Pagination = () => (
     <PaginationItem>
       <Icon name='ArrowLeft' />
     </PaginationItem>
-    <PaginationItem>
-      <Text fontSize={1} fontWeight={200} color='darkGreen' textAlign='center'>
+    <PaginationItem active>
+      <Text fontSize={1} fontWeight={200} textAlign='center'>
         1
       </Text>
     </PaginationItem>
     <PaginationItem>
-      <Text fontSize={1} fontWeight={200} color='darkGreen' textAlign='center'>
+      <Text fontSize={1} fontWeight={200} textAlign='center'>
         2
       </Text>
     </PaginationItem>
     <PaginationItem>
-      <Text fontSize={1} fontWeight={200} color='darkGreen' textAlign='center'>
+      <Text fontSize={1} fontWeight={200} textAlign='center'>
         3
       </Text>
     </PaginationItem>

@@ -5,3 +5,8 @@ export const updateItemQuantity = (id, quantity) => ({
   id,
   quantity
 })
+
+export const removeItem = (id) => ({
+  type: types.REMOVE_ITEM,
+  id
+})

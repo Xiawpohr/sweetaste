@@ -9,7 +9,7 @@ import Background from '../styles/Background.js'
 import Text from '../styles/Text.js'
 import Icon from '../styles/Icon.js'
 
-const CartItem = ({ name, price, quantity, image, updateQuantity }) => (
+const CartItem = ({ name, price, quantity, image, updateQuantity, removeItem }) => (
   <div>
     <Mobile>
       <Flex pb={8.5}>
@@ -37,7 +37,9 @@ const CartItem = ({ name, price, quantity, image, updateQuantity }) => (
         </div>
         <Counter value={quantity} onChange={updateQuantity}/>
         <Text fontSize={1} fontWeight={600} color='darkGreen'>NT{numeral(price * quantity).format('$ 0,0')}</Text>
-        <Icon name='Delete' fill='#8DA291' />
+        <Box clickable onClick={removeItem}>
+          <Icon name='Delete' fill='#8DA291'/>
+        </Box>
       </Flex>
     </Desktop>
   </div>

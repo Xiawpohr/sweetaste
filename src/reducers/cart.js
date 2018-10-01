@@ -6,13 +6,20 @@ const cartState = {
   deliveryFee: 300
 }
 
+let newItems
+
 export default (state = cartState, action) => {
   switch (action.type) {
     case types.UPDATE_ITEM_QUANTITY:
-      const newItems = state.items.map(item => {
+      newItems = state.items.map(item => {
         return item.id === action.id
           ? { ...item, quantity: action.quantity }
           : { ...item }
+      })
+      return { ...state, items: newItems }
+    case types.REMOVE_ITEM:
+      newItems = state.items.filter(item => {
+        return item.id !== action.id
       })
       return { ...state, items: newItems }
     default:

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { updateItemQuantity } from '../actions/cart.js'
+import { updateItemQuantity, removeItem } from '../actions/cart.js'
 import Mobile from './Mobile.js'
 import Desktop from './Desktop.js'
 import CartItem from './CartItem.js'
@@ -9,7 +9,7 @@ import Box from '../styles/Box.js'
 import Text from '../styles/Text.js'
 import Hr from '../styles/Hr.js'
 
-const CartContent = ({ items, updateItemQuantity }) => (
+const CartContent = ({ items, updateItemQuantity, removeItem }) => (
   <div>
     <Mobile>
       <Text py={1} fontSize={2} fontWeight={600} color='darkGreen' bg='lightGreen' textAlign='center'>您的購物車</Text>
@@ -23,6 +23,7 @@ const CartContent = ({ items, updateItemQuantity }) => (
                 quantity={quantity}
                 image={image}
                 updateQuantity={(value) => updateItemQuantity(id, value)}
+                removeItem={() => removeItem()}
               />
             </Box>
           ))}
@@ -40,6 +41,7 @@ const CartContent = ({ items, updateItemQuantity }) => (
               quantity={quantity}
               image={image}
               updateQuantity={(value) => updateItemQuantity(id, value)}
+              removeItem={() => removeItem(id)}
             />
           </Box>
           {index + 1 !== items.length && <Hr />}
@@ -54,7 +56,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  updateItemQuantity: (id, quantity) => dispatch(updateItemQuantity(id, quantity))
+  updateItemQuantity: (id, quantity) => dispatch(updateItemQuantity(id, quantity)),
+  removeItem: (id) => dispatch(removeItem(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartContent)

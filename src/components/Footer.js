@@ -36,7 +36,7 @@ const Footer = () => (
               800 高雄市新興區幸福路 520 號
             </Text>
           </Flex>
-          <Box display={['none', 'block']} >
+          <Box display={['none', 'block']} width={70} >
             <Quote firstLine='今天是個' secondLine='吃甜點的好日子。' fontSize={22} letterSpacing={6}/>
           </Box>
         </Flex>

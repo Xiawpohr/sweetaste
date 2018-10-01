@@ -15,18 +15,20 @@ class Counter extends React.Component {
   }
 
   add () {
+    const newValue = this.state.value + 1
     this.setState({
-      value: this.state.value + 1
+      value: newValue
     })
-    this.props.onChange(this.state.value)
+    this.props.onChange(newValue)
   }
 
   substract () {
     if (this.state.value > 0) {
+      const newValue = this.state.value - 1
       this.setState({
-        value: this.state.value - 1
+        value: newValue
       })
-      this.props.onChange(this.state.value)
+      this.props.onChange(newValue)
     }
   }
 

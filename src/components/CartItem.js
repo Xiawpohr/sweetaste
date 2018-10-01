@@ -9,7 +9,7 @@ import Background from '../styles/Background.js'
 import Text from '../styles/Text.js'
 import Icon from '../styles/Icon.js'
 
-const CartItem = ({ name, price, quantity, image }) => (
+const CartItem = ({ name, price, quantity, image, updateQuantity }) => (
   <div>
     <Mobile>
       <Flex pb={8.5}>
@@ -19,7 +19,7 @@ const CartItem = ({ name, price, quantity, image }) => (
         <Box>
           <Text fontSize={1} fontWeight={200} color='darkGreen'>{name}</Text>
           <Text mb={0} fontSize={0} fontWeight={200} color='darkGreen'>NT{numeral(price).format('$ 0,0')}</Text>
-          <Counter value={quantity}/>
+          <Counter value={quantity} onChange={updateQuantity}/>
         </Box>
       </Flex>
       <Box py={8.5} borderTop='1px solid' borderBottom='1px solid' borderColor='lightGreen'>
@@ -35,7 +35,7 @@ const CartItem = ({ name, price, quantity, image }) => (
           <Text mb='3px' fontSize={1} fontWeight={200} color='darkGreen'>{name}</Text>
           <Text fontSize={0} fontWeight={200} color='darkGreen'>NT{numeral(price).format('$ 0,0')}</Text>
         </div>
-        <Counter value={quantity}/>
+        <Counter value={quantity} onChange={updateQuantity}/>
         <Text fontSize={1} fontWeight={600} color='darkGreen'>NT{numeral(price * quantity).format('$ 0,0')}</Text>
         <Icon name='Delete' fill='#8DA291' />
       </Flex>
